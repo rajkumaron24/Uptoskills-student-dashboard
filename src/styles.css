@@ -574,7 +574,6 @@ body {
     font-size: 14px;
 }
 
-/* Fix for profile progress text overlapping */
 .profile-progress {
     position: relative;
 }
@@ -594,3 +593,27 @@ body {
     margin-top: 4px;
     display: inline-block;
 }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;        
+  width: 250px;        
+  background-color: #1e293b; 
+  overflow-y: auto;     
+  z-index: 1000;        
+}
+
+.main-content {
+  margin-left: 250px; 
+  padding: 20px;
+}
+
+.attendance-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
