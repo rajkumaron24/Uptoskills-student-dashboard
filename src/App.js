@@ -12,6 +12,7 @@ import RightSidebar from './components/dashboard/RightSidebar';
 import BottomProfileMessages from './components/dashboard/BottomProfileMessages';
 import EditProfilePage from './components/EditProfile/EditProfilePage';
 import MyProjects from './components/myProjects/MyProjects';
+import MilestonePage from './components/milestonesPage/milestonePage';
 
 function Dashboard() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/edit-profile" element={<EditProfilePage />} />
         <Route path="/my-project" element={<MyProjects />} />
+        <Route path="/milestones" element={<MilestonePage />} />
       </Routes>
     </Router>
   );
