@@ -11,6 +11,7 @@ import AssignmentsSection from './components/dashboard/AssignmentsSection';
 import RightSidebar from './components/dashboard/RightSidebar';
 import BottomProfileMessages from './components/dashboard/BottomProfileMessages';
 import EditProfilePage from './components/EditProfile/EditProfilePage';
+import MyProjects from './components/myProjects/MyProjects';
 
 function Dashboard() {
   return (
@@ -38,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/edit-profile" element={<EditProfilePage />} />
+        <Route path="/my-project" element={<MyProjects />} />
       </Routes>
     </Router>
   );
