@@ -91,7 +91,8 @@ body {
 .main-content {
     flex: 1;
     padding: 20px;
-    overflow-y: auto;
+    /* Removed overflow-y to hide scrollbars but keep content visible */
+    /* overflow-y: auto; */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
 }
