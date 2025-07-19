@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from '../dashboard/Sidebar';
 import Header from '../dashboard/Header';
-import FormHeader from './FormHeader';
-import FormContent from './FormContent';
+import StudentProfileForm from './StudentProfileForm';
 
 const EditProfilePage = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
@@ -17,8 +16,7 @@ const EditProfilePage = () => {
       <div className={`main-content${isSidebarVisible ? '' : ' full-width'}`} style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         <Header toggleSidebar={toggleSidebar} />
         <div className="form-container" style={{ flex: 1, overflowY: 'auto', padding: '24px' }}>
-          <FormHeader />
-          <FormContent />
+          <StudentProfileForm />
         </div>
       </div>
     </div>
