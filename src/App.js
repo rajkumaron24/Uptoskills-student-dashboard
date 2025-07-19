@@ -14,12 +14,20 @@ import EditProfilePage from './components/EditProfile/EditProfilePage';
 import MyProjects from './components/myProjects/MyProjects';
 import MilestonePage from './components/milestonesPage/milestonePage';
 
+import { useState } from 'react';
+
 function Dashboard() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarVisible((prev) => !prev);
+  };
+
   return (
     <div className="dashboard-container">
-      <Sidebar />
-      <div className="main-content">
-        <Header />
+      {isSidebarVisible && <Sidebar isSidebarVisible={isSidebarVisible} />}
+      <div className={`main-content${isSidebarVisible ? '' : ' full-width'}`}>
+        <Header toggleSidebar={toggleSidebar} />
         <WelcomeSection />
         <StatsGrid />
         <div className="content-row">

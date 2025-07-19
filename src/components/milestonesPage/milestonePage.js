@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './milestonePage.css';
 
 const milestones = [
@@ -10,12 +10,20 @@ const milestones = [
 
 import Sidebar from '../dashboard/Sidebar';
 import RightSidebar from '../dashboard/RightSidebar';
+import Header from '../dashboard/Header';
 
 const MilestonePage = () => {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarVisible((prev) => !prev);
+  };
+
   return (
     <div className="dashboard-container">
-      <Sidebar />
-      <div className="main-content">
+      {isSidebarVisible && <Sidebar isSidebarVisible={isSidebarVisible} />}
+      <div className={`main-content${isSidebarVisible ? '' : ' full-width'}`}>
+        <Header toggleSidebar={toggleSidebar} />
         <div className="page-card">
           <h2 className="milestone-title">📌 Milestones</h2>
           <div className="milestone-grid">
