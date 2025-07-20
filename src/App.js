@@ -1,18 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles.css';
-import Sidebar from './components/dashboard/Sidebar';
-import Header from './components/dashboard/Header';
-import WelcomeSection from './components/dashboard/WelcomeSection';
-import StatsGrid from './components/dashboard/StatsGrid';
-import NoticeBoard from './components/dashboard/NoticeBoard';
-import ChartSection from './components/dashboard/ChartSection';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import AssignmentsSection from './components/dashboard/AssignmentsSection';
-import RightSidebar from './components/dashboard/RightSidebar';
 import BottomProfileMessages from './components/dashboard/BottomProfileMessages';
+import ChartSection from './components/dashboard/ChartSection';
+import Header from './components/dashboard/Header';
+import NoticeBoard from './components/dashboard/NoticeBoard';
+import RightSidebar from './components/dashboard/RightSidebar';
+import Sidebar from './components/dashboard/Sidebar';
+import StatsGrid from './components/dashboard/StatsGrid';
+import WelcomeSection from './components/dashboard/WelcomeSection';
 import EditProfilePage from './components/EditProfile/EditProfilePage';
-import MyProjects from './components/myProjects/MyProjects';
 import MilestonePage from './components/milestonesPage/milestonePage';
+import MyProjects from './components/myProjects/MyProjects';
+import NotificationsPage from './components/Notifications/NotificationsPage';
+import './styles.css';
 
 import { useState } from 'react';
 
@@ -50,6 +50,7 @@ function App() {
         <Route path="/edit-profile" element={<EditProfilePage />} />
         <Route path="/my-project" element={<MyProjects />} />
         <Route path="/milestones" element={<MilestonePage />} />
+        <Route path="/notifications" element={<NotificationsPage />} />
       </Routes>
     </Router>
   );
