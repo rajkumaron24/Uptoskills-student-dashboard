@@ -26,7 +26,8 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
       {isSidebarVisible && <Sidebar isSidebarVisible={isSidebarVisible} />}
-      <div className={`main-content${isSidebarVisible ? '' : ' full-width'}`}>
+     <div className={`main-content${isSidebarVisible ? '' : ' full-width'}`}>
+
         <Header toggleSidebar={toggleSidebar} />
         <WelcomeSection />
         <StatsGrid />
