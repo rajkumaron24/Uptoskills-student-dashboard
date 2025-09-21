@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -622,4 +626,3 @@ body {
   gap: 1rem;
   padding: 1rem 0;
 }
-
